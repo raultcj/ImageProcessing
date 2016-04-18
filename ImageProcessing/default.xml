@@ -8,7 +8,7 @@
       6
     </BoardSize_Height>
     <Calibrate_Pattern>
-      CIRCLES_GRID
+      CHESSBOARD
     </Calibrate_Pattern>
     <Square_Size>
       50
@@ -44,7 +44,7 @@
       "1"
     </Input>
     <Input_Delay>
-      100
+      0
     </Input_Delay>
   </Settings>
 </opencv_storage>

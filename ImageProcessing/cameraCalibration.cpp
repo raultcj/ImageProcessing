@@ -245,7 +245,7 @@ int main(int argc, char* argv[]) {
 	const Scalar RED(0, 0, 255), GREEN(0, 255, 0);
 	const char ESC_KEY = 27;
 
-	for (int i = 0;; i++) { //HERE PROBLEM
+	for (int i = 0;; i++) {
 		Mat view;
 		bool blinkOutput = false;
 
@@ -302,9 +302,6 @@ int main(int argc, char* argv[]) {
 
 				cout << "Image added." << endl;
 			}
-
-			cout << clock() << endl;
-			cout << prevTimestamp << endl;
 
 			drawChessboardCorners(view, s.boardSize, Mat(pointBuf), found);
 		}
