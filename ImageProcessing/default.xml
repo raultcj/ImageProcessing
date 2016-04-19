@@ -44,7 +44,7 @@
       "1"
     </Input>
     <Input_Delay>
-      100
+      0
     </Input_Delay>
   </Settings>
 </opencv_storage>

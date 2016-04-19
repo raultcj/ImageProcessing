@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{FA96ADEB-0C15-43C9-82E7-FD752E3321B0}</ProjectGuid>
+    <ProjectGuid>{5F0C041E-92E3-4159-B40C-DEF0C051CCD2}</ProjectGuid>
     <RootNamespace>ImageProcessing</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -129,7 +129,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="cameraCalibration.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Image.png" />
