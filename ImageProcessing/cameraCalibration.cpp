@@ -213,7 +213,7 @@ enum { DETECTION = 0, CAPTURING = 1, CALIBRATED = 2 };
 
 bool runCalibrationAndSave(Settings& s, Size imageSize, Mat& cameraMatrix, Mat& distCoeffs, vector<vector<Point2f>> imagePoints);
 
-int main(int argc, char* argv[]) {
+int start(int argc, char* argv[]) {
 	Settings s;
 	const string inputSettingsFile = argc > 1 ? argv[1] : "default.xml";
 	FileStorage fs(inputSettingsFile, FileStorage::READ);
@@ -329,7 +329,7 @@ int main(int argc, char* argv[]) {
 			undistort(temp, view, cameraMatrix, distCoeffs);
 		}
 
-		imshow("Image View", view);
+		imshow("Calibration Mode", view);
 		char key = (char)waitKey(s.inputCapture.isOpened() ? 50 : s.delay);
 
 		if (key == ESC_KEY) {

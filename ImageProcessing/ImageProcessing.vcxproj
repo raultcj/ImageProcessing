@@ -130,6 +130,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="cameraCalibration.cpp" />
+    <ClCompile Include="cameraUndistortion.cpp" />
+    <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Image.png" />
@@ -138,6 +140,10 @@
     <Xml Include="default.xml">
       <SubType>Designer</SubType>
     </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cameraCalibration.h" />
+    <ClInclude Include="cameraUndistortion.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
