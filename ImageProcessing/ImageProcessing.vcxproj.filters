@@ -27,12 +27,18 @@
     <ClCompile Include="cameraUndistortion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="arduinoSerialConnection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cameraCalibration.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="cameraUndistortion.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="arduinoSerialConnection.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

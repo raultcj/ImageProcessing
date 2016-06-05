@@ -38,7 +38,7 @@
       0
     </Input_FlipAroundHorizontalAxis>
     <Show_UndistortedImage>
-      1
+      0
     </Show_UndistortedImage>
     <Input>
       "1"

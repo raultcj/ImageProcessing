@@ -42,6 +42,7 @@
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>true</CLRSupport>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -92,6 +93,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>C:\opencv\build\include</AdditionalIncludeDirectories>
+      <CompileAsManaged>true</CompileAsManaged>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>C:\opencv\build\x64\vc14\lib</AdditionalLibraryDirectories>
@@ -129,6 +131,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="arduinoSerialConnection.cpp" />
     <ClCompile Include="cameraCalibration.cpp" />
     <ClCompile Include="cameraUndistortion.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -139,6 +142,7 @@
     </Xml>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="arduinoSerialConnection.h" />
     <ClInclude Include="cameraCalibration.h" />
     <ClInclude Include="cameraUndistortion.h" />
   </ItemGroup>
