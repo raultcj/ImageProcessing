@@ -6,7 +6,7 @@ using namespace System;
 using namespace System::IO::Ports;
 using namespace std;
 
-void connect(int movRequired) {
+void connect(int posX) {
 	int rate = 9600;
 	String^ portName = "COM4";
 
@@ -16,18 +16,9 @@ void connect(int movRequired) {
 	try {
 		arduino->Open();
 
-		if (movRequired == 1) {
-			arduino->WriteLine("1");
-			cout << "Sent 1" << endl;
-		}
-		else if (movRequired == 0) {
-			arduino->WriteLine("0");
-			cout << "Sent 0" << endl;
-		}
-		else if (movRequired == 2) {
-			arduino->WriteLine("2");
-			cout << "Sent 2" << endl;
-		}
+		arduino->WriteLine(posX.ToString());
+
+		cout << posX << endl;
 
 		arduino->Close();
 	}

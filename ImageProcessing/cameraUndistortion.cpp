@@ -9,27 +9,6 @@
 using namespace cv;
 using namespace std;
 
-static void onMouse(int event, int x, int y, int, void*) {
-	if (event != EVENT_LBUTTONDOWN) {
-		return;
-	}
-
-	x = x - 320;
-
-	double cameraConst = 78 / sqrt(pow(640, 2) + pow(480, 2));
-
-	double distance = x;
-	double angle = distance * cameraConst;
-
-	double depth = 1;
-	double movRequired = depth * tan(angle);
-
-	cout << angle << endl;
-	cout << movRequired << endl;
-
-	connect(movRequired);
-}
-
 void undistortCamera(InputArray src, OutputArray dst) {
 	Mat cameraMatrix;
 	Mat distCoeffs;
@@ -51,29 +30,6 @@ void startUndist(OutputArray dst) {
 		cout << "Camera not detected, please connect a single camera and relaunch the program." << endl;
 		return;
 	}
-	//Click mode
-	/*
-	while (true) {
-		Mat orig, undist;
-
-		capture >> orig;
-
-		if (orig.empty()) {
-			cout << "Cannot read from camera." << endl;
-			break;
-		}
-
-		undistortCamera(orig, undist);
-
-		namedWindow("Undistorted Image", CV_WINDOW_AUTOSIZE);
-		imshow("Undistorted Image", undist);
-		setMouseCallback("Undistorted Image", onMouse, 0);
-
-		if (waitKey(30) == 27) {
-			break;
-		}
-	}
-	*/
 
 	//Color Mode
 
@@ -134,16 +90,7 @@ void startUndist(OutputArray dst) {
 			int posX = m10 / mA;
 			int posY = m01 / mA;
 
-			if (posX < 300) {
-				connect(1);
-			}
-			else if (posX > 340) {
-				connect(0);
-			}
-			else {
-				connect(2);
-				cout << "Acceptable position" << endl;
-			}
+			connect(posX);
 		}
 
 		if (waitKey(1) == 27) {

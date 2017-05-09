@@ -1,1 +1,1 @@
-void connect(int movRequired);
+void connect(int posX);
